@@ -1,0 +1,37 @@
+[hotreload]
+  suffixes = [".go"]
+  ignore = []
+
+[web]
+  name = "socket_server"
+  url  = "http://localhost"
+  doc = "./apidoc"
+  addr = ":8808"
+  debug = false
+
+  [app.logger]
+    level = "INFO"
+    name = "application"
+
+[cellnet]
+  # peerType = "tcp.Acceptor"
+  peerType = "gorillaws.Acceptor"
+  name  = "socket_server"
+  addr = "http://127.0.0.1:18808/chat"
+  # procName = "tcp.ltv"
+  procName = "gorillaws.ltv"
+  debug = false
+
+[database]
+  driver = "mysql"
+
+[mysql]
+  databaseName ="socket_server"
+  databaseUserName ="root"
+  databasePassword ="root"
+
+[redis]
+  network = "tcp"
+  address = "192.168.2.253:6379"
+  password = ""
+  database = "1"
