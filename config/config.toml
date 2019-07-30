@@ -32,6 +32,6 @@
 
 [redis]
   network = "tcp"
-  address = "192.168.2.253:6379"
+  address = "localhost:6379"
   password = ""
   database = "1"
